@@ -14,6 +14,11 @@ const GithubReadMeBuilder = () => {
         Made with <Heart color="red" /> by <a href="/">webapp.io</a>
     </p>;
 
+    const scrollToEdit = () => {
+        const element = document.getElementById("component-editor");
+        element.scrollIntoView({ block: "start", behavior: "smooth" });
+    };
+
     return (
         <div className="ReadMeBuilder">
             <div className="ReadMeBuilder__White ReadMeBuilder--Top">
@@ -31,8 +36,11 @@ const GithubReadMeBuilder = () => {
             {/* Try Me CTA for GitHub  Cool Component */}
             <div className="container text-center pt-5">
                 <a
-                    href="/#component-editor"
-                    onClick={() => setSelectedComponent(CoolComponents.WavyBanner)}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        setSelectedComponent(CoolComponents.WavyBanner);
+                        scrollToEdit();
+                    }}
                     className="btn ReadMeBuilder--CTA--Text d-flex justify-content-center align-items-center"
                 >
                     <div className="ReadMeBuilder--CTA--ArrowWrapper">
@@ -51,19 +59,20 @@ const GithubReadMeBuilder = () => {
             </div>
 
             {/* Preview of Cool Components to try */}
-            <div className="container-fluid">
+            <div className="container">
                 <div className="d-flex justify-content-center CoolComponent--Preview flex-wrap">
                     {
                         Object.keys(PREVIEW_SOURCES).map(key => {
                             return (
                                 <div
                                     key={key}
-                                    className="CoolComponent--Preview--Object mx-3">
+                                    className="CoolComponent--Preview--Object m-3 m-md-5">
                                         <img
                                         className="btn btn-outline-primary"
-                                        onClick={() => {
+                                        onClick={(e) => {
+                                            e.preventDefault();
                                             setSelectedComponent(key);
-                                            window.location.href="/#component-editor";
+                                            scrollToEdit();
                                         }}
                                         src={PREVIEW_SOURCES[key].src}
                                         title={PREVIEW_SOURCES[key].component}
@@ -76,13 +85,14 @@ const GithubReadMeBuilder = () => {
                                             :
                                             null
                                         }
-                                    <button
-                                        className="btn btn-outline-primary"
-                                        onClick={() => {
+                                    <a
+                                        className="btn btn-outline-primary mt-3"
+                                        onClick={(e) => {
+                                            e.preventDefault();
                                             setSelectedComponent(key);
-                                            window.location.href="/#component-editor";
+                                            scrollToEdit();
                                         }}
-                                    >Try me!</button>
+                                    >Try me!</a>
                                 </div>
                             )
                         })
@@ -91,8 +101,8 @@ const GithubReadMeBuilder = () => {
             </div>
 
             {/* Editing Section for Cool Components */}
-            <div className="container p-5">
-                <h1 className="ReadMeBuilder--Title" id="component-editor">Pimp out your Cool Component</h1>
+            <div className="container p-5" id="component-editor">
+                <h1 className="ReadMeBuilder--Title">Pimp out your Cool Component</h1>
                 <EditCoolComponent component={selectedComponent} />
             </div>
 

@@ -50,16 +50,16 @@ const SOCIAL_MEDIA = [
     "LinkedIn",
 ]
 
+
 const TECHNOLOGIES = [
     "JavaScript",
     "HTML",
     "CSS",
-    "AWS",
-    "ReactJS",
     "Python",
     "Java",
     "NodeJS",
-    "Golang",
+    "GoLang",
+    "Elixir",
     "MySQL",
     "PostgreSQL",
     "MongoDB",
@@ -67,7 +67,7 @@ const TECHNOLOGIES = [
     "AWS",
     "ReactJS",
     "Express",
-    "Flask",
+    "Flask"
 ]
 
 export {

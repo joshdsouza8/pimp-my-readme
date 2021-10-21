@@ -15,7 +15,7 @@ router.get("/sliding-text", (req, res) => {
 
     // Get Query Params
     const text = decodeURIComponent(req.query.text) || "webapp.io github readme builder";
-    const emojis = decodeURIComponent(req.query.emojis) || "";
+    const emojis = req.query.emojis || "";
 
     // Get the Emoji's
     const emojiArray = emojis.split("_");
@@ -25,7 +25,7 @@ router.get("/sliding-text", (req, res) => {
 
         // Check if Emoji has other attributes and add in a string
         if (emoji.includes("-")) {
-            tempString = emojis.split("-").reduce((tempStr, attr) => {
+            tempString = emoji.split("-").reduce((tempStr, attr) => {
                 return tempStr + `&#x${attr};`;
             }, "");
         }

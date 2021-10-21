@@ -1,11 +1,11 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import "../../../styles/github-readme-builder.scss";
-// import { useAlert } from "react-alert";
 import { Copy } from "react-feather";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const MarkdownCopy = ({ markdown }) => {
-    // const alert = useAlert();
 
     const copyToClipboard = () => {
         try {
@@ -15,10 +15,10 @@ const MarkdownCopy = ({ markdown }) => {
             el.select();
             document.execCommand("copy");
             document.body.removeChild(el);
-            // alert.success("Copied to Clipboard")
+            toast.success("Copied to Clipboard", { position: "bottom-center", hideProgressBar: true });
         } catch(e) {
             console.log(e);
-            // alert.error("Failed to Copy to Clipboard")
+            toast.error("Failed to Copy to Clipboard", { position: "bottom-center", hideProgressBar: true });
         }
     }
 
@@ -55,7 +55,11 @@ const MarkdownCopy = ({ markdown }) => {
                         <Copy />
                     </button>
                 </div>
+                <ToastContainer 
+                    autoClose={2000}
+                />
             </div>
+            <small className="pt-2">Please note, there's a link in the markdown that points back to this page so others can find *Pimp my README* too. If you don't want to point back to this site, then please remove it.</small>
         </div>
         </>
     )

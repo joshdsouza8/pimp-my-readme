@@ -19,7 +19,7 @@ const VisitorCounter = () => {
         };
         const query = queryString.stringify(params);
         const src = `/pimp-my-readme/visitor-counter?${query}`;
-        const md = `[![Visitor Counter for ${page}](${origin}/pimp-my-readme/visitor-counter?${query}})](${origin})`;
+        const md = `[![Visitor Counter for ${page}](${origin}/pimp-my-readme/visitor-counter?${query})}](${origin})`;
         setSrc(src);
         setMarkdown(md);
     }, [page])

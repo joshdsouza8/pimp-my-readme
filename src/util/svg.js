@@ -1,8 +1,16 @@
 const getSlidingTextWithEmojis = (text = "", emojiString = "") => {
     return `
-        <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="200" viewBox="0 0 1200 200">
-            <foreignObject width="100%" height="200">
+        <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" viewBox="0 0 1200 90">
+            <foreignObject width="100%" height="100%">
                 <style>
+                @media only screen and(max-width: 600px) {
+                    .text {
+                        font-size: 25px;
+                    }
+                    .emoji {
+                        font-size: 25px;
+                    }
+                }
                 .text {
                     color: black;
                     font-size: 40px;
@@ -18,7 +26,8 @@ const getSlidingTextWithEmojis = (text = "", emojiString = "") => {
                     -webkit-text-fill-color: transparent;
                 }
                 .emoji {
-                    font-family: "Segoe UI Emoji"
+                    font-family: "Segoe UI Emoji";
+                    font-size: 40px;
                 }
                 .container {
                     width: 100%;
@@ -26,8 +35,8 @@ const getSlidingTextWithEmojis = (text = "", emojiString = "") => {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    background-color: white;
-                    justify-content: start;
+                    background-color: transparent;
+                    justify-content: center;
                 }
 
                 @keyframes slideRight {
@@ -60,12 +69,12 @@ const getSlidingTextWithEmojis = (text = "", emojiString = "") => {
 
 const getWavyBanner = (title = "", subtitle = "") => {
     return `
-    <svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+    <svg fill="none" viewBox="0 0 800 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style>
                 @keyframes rotate {
-                    0% {
+                    0% { appe
                         transform: rotate(3deg);
                     }
                     100% {
@@ -125,7 +134,6 @@ const getWavyBanner = (title = "", subtitle = "") => {
 
                 h1 {
                     font-size: 50px;
-                    line-height: 1.3;
                     letter-spacing: 5px;
                     text-transform: uppercase;
                     text-shadow:
@@ -143,6 +151,16 @@ const getWavyBanner = (title = "", subtitle = "") => {
                     animation-name: fadeIn;
                     animation-duration: 2s;
                 }
+                
+                @media only screen and (max-width: 500px) {
+                    h1 {
+                        font-size: 25px;
+                    }
+                    p {
+                        font-size: 18px;
+                    }
+                }
+                
             </style>
             <div class="container">
                 <h1>${title}</h1>
@@ -156,8 +174,8 @@ const getWavyBanner = (title = "", subtitle = "") => {
 
 const getVisitorCounter = (count = 0) => {
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="100" viewBox="0 0 900 100">
-        <foreignObject width="100%" height="100">
+    <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" viewBox="0 0 900 60">
+        <foreignObject width="100%" height="100%">
         <style>
         .text {
             font-size: 40px;
@@ -194,8 +212,8 @@ const getVisitorCounter = (count = 0) => {
 
 const getSocialIcons = (socialIcon) => {
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 100 100">
-        <foreignObject width="100%" height="80">
+    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+        <foreignObject width="100%" height="100%">
         <style>
         .container {
             width: 100%;
@@ -203,7 +221,7 @@ const getSocialIcons = (socialIcon) => {
             display: flex;
             flex-direction: row;
             align-items: center;
-            background-color: white;
+            background-color: transparent;
         }
 
         </style>
@@ -219,7 +237,7 @@ const getSocialIcons = (socialIcon) => {
 
 const getTechnologiesSvg = (technologyString = "") => {
     return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1000 320">
         <foreignObject width="100%" height="100%">
         <style>
         .container {
@@ -227,9 +245,10 @@ const getTechnologiesSvg = (technologyString = "") => {
             height: 100%;
             display: flex;
             flex-direction: row;
-            align-items: flex-start;
-            background-color: white;
+            align-items: center;
+            background-color: transparent;
             flex-wrap: wrap;
+            align-content: center;
         }
         .item {
             display: flex;
@@ -245,6 +264,9 @@ const getTechnologiesSvg = (technologyString = "") => {
             border-radius: 5px;
             padding-left: 10px;
             padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #f8f8ff;
         }
         .item-text {
             font-size: 14px;

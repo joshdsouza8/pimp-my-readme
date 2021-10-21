@@ -7,10 +7,13 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import queryString from "query-string";
 import { origin } from "../index";
+import { Check, X } from "react-feather";
+import Checkbox from "@material-ui/core/Checkbox";
 
 const Technology = () => {
     const { setSrc, setMarkdown } = useContext(MarkdownPreviewContext);
     const [technology, setTechnology] = useState([]);
+    const [techMap, setTechMap] = useState({});
     const [otherTechnology, setOtherTechnology] = useState([]);
     const [otherTechText, setOtherTechText] = useState("");
 
@@ -30,33 +33,59 @@ const Technology = () => {
         setMarkdown(md);
     }, [technology, otherTechnology]);
 
+
+    const addToTechnology = (value) => {
+        setTechMap(prevState => {
+            return {
+                ...prevState,
+                [value]: true,
+            }
+        })
+        setTechnology(prevState => {
+            return [
+                ...prevState,
+                value,
+            ]
+        })
+    }
+
+    const removeTechnology = (tech) => {
+        const elementIndex = technology.findIndex(el => el === tech);
+        setTechMap(prevState => {
+            return {
+                ...prevState,
+                [tech]: false,
+            }
+        })
+        setTechnology(prevState => {
+            prevState.splice(elementIndex, 1);
+            return [...prevState];
+        })
+    }
+
     return (
         <div className="d-block pb-5">
             <p>Select your top Technologies</p>
-            <Select
-                label="Social Media"
-                InputLabelProps={{
-                    shrink: true,
-                }}
-                placeholder="Social Media"
-                variant="outlined"
-                fullWidth
-                required
-                multiple
-                name="Social Media"
-                className="bg-white"
-                value={technology}
-                onChange={e => setTechnology(e.target.value)}
-            >
-                {
-                    TECHNOLOGIES.map((tech, index) => (
-                        <MenuItem value={tech}>
-                            {tech}
-                        </MenuItem>
-                    ))
-                }
-            </Select>
-            <small>Select one or multiple.</small>
+            <div className="d-flex flex-wrap">
+            {
+                TECHNOLOGIES.map((tech, index) => (
+                    <div className="d-inline p-3">
+                        <Checkbox 
+                        className="d-block"
+                        color="primary"
+                        onClick={() => {
+                            if (techMap[tech]) {
+                                removeTechnology(tech);
+                            } else {
+                                addToTechnology(tech);
+                            }
+                        }}
+                        checked={techMap[tech]} />
+                        <p className="d-block">{tech}</p>
+                    </div>
+                ))
+            }
+            </div>
             <CommonTextField
                 name="Other Technology"
                 value={otherTechText}
@@ -64,14 +93,14 @@ const Technology = () => {
             />
             {
                 otherTechnology.map((tech, index) => (
-                    <div className="badge badge-light border-dark mx-3 my-2 bg-white">
+                    <div className="badge text-dark mx-3 my-2 bg-white">
                         <span className="mx-2">{tech}</span>
                         <button
                             onClick={() => setOtherTechnology(prevState => {
                                 prevState.splice(index, 1);
                                 return [...prevState];
                             })}
-                            className="btn btn-danger"><i className="feather icon-x" /></button>
+                            className="btn btn-danger"><X /></button>
                     </div>
                 ))
             }
