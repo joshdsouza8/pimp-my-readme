@@ -4,7 +4,7 @@ import "../../../styles/github-readme-builder.scss";
 import { CommonTextField } from "../common/CommonTextField";
 import { X } from "react-feather";
 import queryString from "query-string";
-let origin = "https://github-readme.webapp.io";
+import { origin } from "../index";
 let Picker;
 
 const SlidingText = () => {
@@ -32,8 +32,8 @@ const SlidingText = () => {
             emojis: encodeURIComponent(emojiString),
         };
         const query = queryString.stringify(params);
-        const source = `/github-readme-builder/sliding-text?${query}`;
-        const md = `[![${text}](${origin}/github-readme-builder/sliding-text?${query})](${origin})`;
+        const source = `/pimp-my-readme/sliding-text?${query}`;
+        const md = `[![${text}](${origin}/pimp-my-readme/sliding-text?${query})](${origin})`;
         setSrc(source);
         setMarkdown(md);
     }, [text, emojis]);

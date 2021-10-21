@@ -6,7 +6,7 @@ import { TECHNOLOGIES } from "../index";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import queryString from "query-string";
-let origin = "https://github-readme.webapp.io";
+import { origin } from "../index";
 
 const Technology = () => {
     const { setSrc, setMarkdown } = useContext(MarkdownPreviewContext);
@@ -24,8 +24,8 @@ const Technology = () => {
             technology: tech,
         };
         const query = queryString.stringify(params);
-        const source = `/github-readme-builder/technology?${query}`;
-        const md = `[![${tech}](${origin}/github-readme-builder/technology?${query})](${origin})`
+        const source = `/pimp-my-readme/technology?${query}`;
+        const md = `[![${tech}](${origin}/pimp-my-readme/technology?${query})](${origin})`
         setSrc(source);
         setMarkdown(md);
     }, [technology, otherTechnology]);

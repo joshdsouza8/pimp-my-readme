@@ -19,10 +19,10 @@ const GithubReadMeBuilder = () => {
             <div className="ReadMeBuilder__White ReadMeBuilder--Top">
                 <div className="d-block px-1">
                     <h1 className="ReadMeBuilder--Title text-center">
-                        GitHub Readme Builder
+                        Pimp My README
                     </h1>
                     <p className="ReadMeBuilder--Paragraph">
-                        Make your GitHub README profile look cool with some custom components.
+                        Make your README profile look cool with some custom components.
                     </p>
                     {webappTag}
                 </div>
@@ -44,7 +44,7 @@ const GithubReadMeBuilder = () => {
                     <div className="ReadMeBuilder--CTA--ImageWrapper">
                         <img
                             className="ReadMeBuilder--CTA--Image"
-                            src="/github-readme-builder/wavy-banner?title=JellyBear&subtitle=I%27m%20the%20webapp.io%20mascot%20:)"
+                            src="/pimp-my-readme/wavy-banner?title=JellyBear&subtitle=I%27m%20the%20webapp.io%20mascot%20:)"
                         />
                     </div>
                 </a>
@@ -57,6 +57,7 @@ const GithubReadMeBuilder = () => {
                         Object.keys(PREVIEW_SOURCES).map(key => {
                             return (
                                 <div
+                                    key={key}
                                     className="CoolComponent--Preview--Object mx-3">
                                         <img
                                         className="btn btn-outline-primary"
@@ -91,7 +92,7 @@ const GithubReadMeBuilder = () => {
 
             {/* Editing Section for Cool Components */}
             <div className="container p-5">
-                <h1 className="ReadMeBuilder--Title" id="component-editor">Edit your Cool Component</h1>
+                <h1 className="ReadMeBuilder--Title" id="component-editor">Pimp out your Cool Component</h1>
                 <EditCoolComponent component={selectedComponent} />
             </div>
 

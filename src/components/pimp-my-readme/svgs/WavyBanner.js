@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { CommonTextField } from "../common/CommonTextField";
 import { MarkdownPreviewContext } from "../common/EditCoolComponent";
 import queryString from "query-string";
-let origin = "https://github-readme.webapp.io";
+import { origin } from "../index";
 
 const WavyBanner = () => {
     const { setSrc, setMarkdown } = useContext(MarkdownPreviewContext);
@@ -19,8 +19,8 @@ const WavyBanner = () => {
             subtitle: subtitle,
         }
         const query = queryString.stringify(params);
-        const source = `/github-readme-builder/wavy-banner?${query}`;
-        const md = `[![${title}, ${subtitle}](${origin}/github-readme-builder/wavy-banner?${query})](${origin})`;
+        const source = `/pimp-my-readme/wavy-banner?${query}`;
+        const md = `[![${title}, ${subtitle}](${origin}/pimp-my-readme/wavy-banner?${query})](${origin})`;
         setSrc(source);
         setMarkdown(md);
     }, [title, subtitle]);

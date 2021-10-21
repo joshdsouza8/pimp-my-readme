@@ -3,7 +3,7 @@ import { MarkdownPreviewContext } from "../common/EditCoolComponent";
 import "../../../styles/github-readme-builder.scss";
 import { CommonTextField } from "../common/CommonTextField";
 import queryString from "query-string";
-let origin = "https://github-readme.webapp.io";
+import { origin } from "../index";
 
 const VisitorCounter = () => {
     const { setSrc, setMarkdown } = useContext(MarkdownPreviewContext);
@@ -18,8 +18,8 @@ const VisitorCounter = () => {
             page: page,
         };
         const query = queryString.stringify(params);
-        const src = `/github-readme-builder/visitor-counter?${query}`;
-        const md = `[![Visitor Counter for ${page}](${origin}/github-readme-builder/visitor-counter?${query}})](${origin})`;
+        const src = `/pimp-my-readme/visitor-counter?${query}`;
+        const md = `[![Visitor Counter for ${page}](${origin}/pimp-my-readme/visitor-counter?${query}})](${origin})`;
         setSrc(src);
         setMarkdown(md);
     }, [page])

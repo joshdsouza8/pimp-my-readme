@@ -6,7 +6,7 @@ import { SOCIAL_MEDIA } from "../index";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import queryString from "query-string";
-let origin = "https://github-readme.webapp.io";
+import { origin } from "../index";
 
 const SocialMedia = () => {
     const { setSrc, setMarkdown } = useContext(MarkdownPreviewContext);
@@ -22,8 +22,8 @@ const SocialMedia = () => {
             social: socialMedia,
         }
         const query = queryString.stringify(params);
-        const src = `/github-readme-builder/social-media?${query}`
-        const md = `[![${socialMedia}](${origin}/github-readme-builder/social-media?${query})](${socialLink})`
+        const src = `/pimp-my-readme/social-media?${query}`
+        const md = `[![${socialMedia}](${origin}/pimp-my-readme/social-media?${query})](${socialLink})`
         setSrc(src);
         setMarkdown(md);
     }, [socialMedia, socialLink]);

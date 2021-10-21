@@ -2,7 +2,7 @@ import express from "express";
 import React from "react";
 import { renderToString } from "react-dom/server";
 import hbs from "handlebars";
-import GithubReadMeBuilder from "../components/github-myspace/home";
+import GithubReadMeBuilder from "../components/pimp-my-readme/home";
 
 const router = express.Router();
 
