@@ -1,0 +1,215 @@
+@import "./_variables.scss";
+
+// Common Elements
+@mixin general($main-background: $dark, $column-background: $white, $text-color: $black) {
+    html, body, footer {
+        margin: 0;
+        padding: 0;
+        background: $main-background;
+        color: $text-color;
+    }
+    .main-column {
+        display: flex;
+        flex-direction: column;
+        background-color: $column-background;
+    }
+}
+@include general;
+
+p, blockquote {
+    font-family: 'Lato', sans-serif;
+}
+
+.code-font {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}
+
+body {
+    font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue", sans-serif;
+}
+
+// Navbar
+@mixin nav($color: $black, $opacity: 0.5) {
+    &-link {
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: $color !important;
+        opacity: $opacity;
+    }
+
+    &-logo {
+        height: 2rem;
+        width: auto;
+    }
+}
+
+@mixin navbar() {
+    &-collapse.collapse.show {
+        margin-top: 1rem;
+    }
+}
+
+.nav {
+    @include nav
+}
+
+.navbar {
+    @include navbar
+}
+
+// Background Color
+.bg-primary {
+    background-color: $blue !important;
+}
+
+// Button
+@mixin btn($primary: $blue, $secondary: $dark-blue) {
+    &-primary {
+        background-color: $blue;
+    }
+
+    &-primary, &-outline-primary {
+        border: 2px solid $blue;
+    }
+
+    &-primary:hover, &-outline-primary:hover {
+        background-color: $blue;
+        border: 2px solid $dark-blue;
+    }
+}
+
+.btn {
+    @include btn
+}
+
+
+// Site Footer
+@mixin site($color: $white) {
+    &-footer-column {
+        display: flex;
+        flex-direction: column;
+        margin-right: 5rem;
+        margin-top: 2rem;
+    }
+
+    &-footer-column:last-child {
+        margin-right: 0;
+    }
+
+    &-footer-section-header {
+        text-transform: uppercase;
+        color: $color;
+        opacity: 0.7;
+        font-weight: normal;
+    }
+}
+.site {
+    @include site;
+}
+
+@media screen and (max-width: 768px) {
+    .site-footer-column {
+        margin-right: 2.5rem;
+    }
+}
+
+
+// Footer
+@mixin footer($color: $white) {
+    &-logo {
+        width: 170px;
+        height: 34px;
+    }
+    &-link {
+        color: #fff;
+    }
+
+    &-bottommost-section {
+        border-top: 1px solid rgba($color, 0.6);
+    }
+
+    &-bottom-text {
+        margin-left: 2em;
+        color: rgba($color, 0.6);
+    }
+}
+
+.footer {
+    @include footer;
+}
+
+
+// Login Text (above button)
+@mixin base_login_anchor($link_color: $black, $opacity: 1) {
+    font-weight: bold;
+    font-size: 14px;
+    color: $link_color;
+    opacity: $opacity;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: $link_color;
+    }
+}
+
+.base-login-anchor {
+    @include base_login_anchor($black, 0.5);
+}
+
+// Extra
+.account-avatar {
+    border-radius: 4px;
+}
+
+.jumbotron {
+    background-color: $light;
+}
+
+// No Script Header Text (About Us, Terms of Service, Privacy Policy, etc.)
+.NoScript-Header {
+    &-Items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &-Title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: #FEFDF9;
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+
+    &-Paragraph {
+        width: 35%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FEFDF9;
+        margin-bottom: 100px;
+    }
+
+    &-Container{
+        color: white;
+        background-color: #17181b;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        text-align: center;
+        min-height: 70vh;
+    }
+}

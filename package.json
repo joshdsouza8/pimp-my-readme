@@ -1,0 +1,46 @@
+{
+  "name": "github-readme-builder",
+  "version": "1.0.0",
+  "description": "Make your GitHub README profile look cool",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "npx webpack --watch",
+    "client": "nodemon src/index.js --exec babel-node",
+    "dev": "concurrently \"npm run client\" \"npm run webpack\""
+  },
+  "author": "webapp.io",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "axios": "^0.23.0",
+    "concurrently": "^6.3.0",
+    "emoji-picker-react": "^3.4.8",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "query-string": "^7.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9",
+    "react-no-ssr": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.4.0",
+    "ignore-styles": "^5.0.1",
+    "node-sass": "^6.0.1",
+    "nodemon-webpack-plugin": "^4.5.2",
+    "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.0",
+    "svg-url-loader": "^7.1.1",
+    "webpack": "^5.59.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-node-externals": "^3.0.0"
+  }
+}

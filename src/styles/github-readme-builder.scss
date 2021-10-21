@@ -1,0 +1,188 @@
+@import "./common.scss";
+@import "./_variables.scss";
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+@include general($light, $light, $black);
+
+.site {
+  @include site($white);
+}
+
+.ReadMeBuilder {
+  min-height: 200px;
+
+  &--Top {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &--Logo {
+    max-width: 200px;
+    max-height: 100px;
+    margin-left: 20px;
+  }
+
+  &--Title {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 40px;
+    margin-top: 50px;
+  }
+
+  &--SubTitle {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  &--Paragraph {
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
+
+    &__Small {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  &--Icon {
+    color: red;
+  }
+
+  &__White {
+    background-color: $white;
+  }
+
+  &__Link {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    color: $black;
+
+    &--Selected {
+      font-weight: bold;
+    }
+
+    &:hover {
+      color: $black;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  &--CTA {
+    &--ImageWrapper {
+      width: 600px;
+      max-height: 400px;
+      object-fit: contain;
+    }
+    &--ArrowWrapper {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+    &--Image {
+      width: 100%;
+      height: 100%;
+    }
+    &--Text {
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+}
+
+.CoolComponent {
+  &--Title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    text-decoration-line: underline;
+  }
+
+  &--Emoji {
+    font-size: 20px;
+  }
+
+  &--HelperText {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  &--Subtitle {
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 25px;
+  }
+
+  &--Preview {
+    margin-top: 120px;
+    margin-bottom: 120px;
+
+    &--Container {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+
+    &--Object {
+      max-height: 600px;
+      width: 600px;
+      object-fit: contain;
+      border-radius: 5px;
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+
+    &--Image {
+      max-width: 100%;
+      max-height: 100%;
+      background-color: white;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &--Anchor {
+      position: relative;
+      display: inline-block;
+    }
+  }
+
+}
+
+.Background__White {
+  background-color: white;
+}
+
+.FramePreview {
+  max-height: 1000px;
+  &--Image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .CoolComponent {
+    &--Preview {
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+      &--Object {
+        width: 100vw;
+        object-fit: contain;
+      }
+    }
+  }
+}
