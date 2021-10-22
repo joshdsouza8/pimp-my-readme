@@ -23,13 +23,14 @@ const getSlidingTextWithEmojis = (text = "", emojiString = "") => {
                     animation-duration: 4s;
                     animation-iteration-count: infinite;
                     animation-timing-function: linear;
+                    animation-delay: 0.01s;                    
         
                     -webkit-animation-name: slideRight;
                     -webkit-animation-direction: alternate;
                     -webkit-animation-duration: 4s;
                     -webkit-animation-iteration-count: infinite;
-                    -webkit-animation-timing-function: linear;  
-
+                    -webkit-animation-timing-function: linear;
+                    -webkit-animation-delay: 0.01s;
                 }
                 .textGradient {
                     background: -webkit-linear-gradient(#0000ff, rgb(255, 0, 0));
