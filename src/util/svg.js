@@ -17,20 +17,6 @@ const getSlidingTextWithEmojis = (text = "", emojiString = "") => {
                     font-weight: bold;
                     font-family: monospace;
                     padding-left: 30px;
-
-                    animation-name: slideRight;
-                    animation-direction: alternate;
-                    animation-duration: 4s;
-                    animation-iteration-count: infinite;
-                    animation-timing-function: linear;
-                    animation-delay: 0.01s;                    
-        
-                    -webkit-animation-name: slideRight;
-                    -webkit-animation-direction: alternate;
-                    -webkit-animation-duration: 4s;
-                    -webkit-animation-iteration-count: infinite;
-                    -webkit-animation-timing-function: linear;
-                    -webkit-animation-delay: 0.01s;
                 }
                 .textGradient {
                     background: -webkit-linear-gradient(#0000ff, rgb(255, 0, 0));
@@ -98,11 +84,21 @@ const getWavyBanner = (title = "", subtitle = "") => {
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style>
+
+                @-webkit-keyframes rotate {
+                    from {
+                        -webkit-transform: rotate(3deg);
+                    }
+                    to {
+                        -webkit-transform: rotate(-3deg);
+                    }
+                }
+
                 @keyframes rotate {
-                    0% { appe
+                    from {
                         transform: rotate(3deg);
                     }
-                    100% {
+                    to {
                         transform: rotate(-3deg);
                     }
                 }
@@ -156,7 +152,7 @@ const getWavyBanner = (title = "", subtitle = "") => {
                     color: white;
                     text-align: center;
                 }
-
+                
                 h1 {
                     font-size: 50px;
                     letter-spacing: 5px;
@@ -167,14 +163,11 @@ const getWavyBanner = (title = "", subtitle = "") => {
                         0 3px 0 #efefef,
                         0 4px 0 #efefef,
                         0 12px 5px rgba(0, 0, 0, 0.1);
-                    animation: rotate ease-in-out 1s infinite alternate;
                 }
 
                 p {
                     font-size: 20px;
                     text-shadow: 0 1px 0 #efefef;
-                    animation-name: fadeIn;
-                    animation-duration: 2s;
                 }
                 
                 @media only screen and (max-width: 500px) {

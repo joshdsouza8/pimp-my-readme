@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect } from "react";
 import "../../styles/github-readme-builder.scss";
 import {
     CoolComponents,
@@ -18,6 +18,10 @@ const GithubReadMeBuilder = () => {
         const element = document.getElementById("component-editor");
         element.scrollIntoView({ block: "start", behavior: "smooth" });
     };
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    }, [])
 
     return (
         <div className="ReadMeBuilder">
