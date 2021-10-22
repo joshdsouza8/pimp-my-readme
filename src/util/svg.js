@@ -16,8 +16,20 @@ const getSlidingTextWithEmojis = (text = "", emojiString = "") => {
                     font-size: 40px;
                     font-weight: bold;
                     font-family: monospace;
-                    animation: slideRight linear 4s infinite alternate;
                     padding-left: 30px;
+
+                    animation-name: slideRight;
+                    animation-direction: alternate;
+                    animation-duration: 4s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+        
+                    -webkit-animation-name: slideRight;
+                    -webkit-animation-direction: alternate;
+                    -webkit-animation-duration: 4s;
+                    -webkit-animation-iteration-count: infinite;
+                    -webkit-animation-timing-function: linear;  
+                    
                 }
                 .textGradient {
                     background: -webkit-linear-gradient(#0000ff, rgb(255, 0, 0));
@@ -37,6 +49,18 @@ const getSlidingTextWithEmojis = (text = "", emojiString = "") => {
                     align-items: center;
                     background-color: transparent;
                     justify-content: center;
+                }
+                
+                @-webkit-keyframes slideRight {
+                    0% {
+                        transform: translateX(-100%);
+                    }
+                    75% {
+                        transform: translateX(0%);
+                    }
+                    100% {
+                        transform: translateX(0%);
+                    }
                 }
 
                 @keyframes slideRight {
