@@ -29,7 +29,7 @@ const getSlidingTextWithEmojis = (text = "", emojiString = "") => {
                     -webkit-animation-duration: 4s;
                     -webkit-animation-iteration-count: infinite;
                     -webkit-animation-timing-function: linear;  
-                    
+
                 }
                 .textGradient {
                     background: -webkit-linear-gradient(#0000ff, rgb(255, 0, 0));
@@ -53,13 +53,13 @@ const getSlidingTextWithEmojis = (text = "", emojiString = "") => {
                 
                 @-webkit-keyframes slideRight {
                     0% {
-                        transform: translateX(-100%);
+                        -webkit-transform: translateX(-100%);
                     }
                     75% {
-                        transform: translateX(0%);
+                        -webkit-transform: translateX(0%);
                     }
                     100% {
-                        transform: translateX(0%);
+                        -webkit-transform: translateX(0%);
                     }
                 }
 
