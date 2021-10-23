@@ -4,6 +4,7 @@ import "../../../styles/github-readme-builder.scss";
 import { Copy } from "react-feather";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { EVENTS, trackEvent } from "../../track-stuff";
 
 const MarkdownCopy = ({ markdown }) => {
 
@@ -49,7 +50,10 @@ const MarkdownCopy = ({ markdown }) => {
                 </div>
                 <div className="col-2 col-lg-1">
                     <button
-                        onClick={copyToClipboard}
+                        onClick={() => {
+                            copyToClipboard();
+                            trackEvent(EVENTS.CLICKED_COPY_MARKDOWN);
+                        }}
                         className="btn btn-primary btn-lg w-100"
                     >
                         <Copy />

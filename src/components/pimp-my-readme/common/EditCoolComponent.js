@@ -7,6 +7,7 @@ import SlidingText from "../svgs/SlidingText";
 import SocialMedia from "../svgs/SocialMedia";
 import VisitorCounter from "../svgs/VisitorCounter";
 import Technology from "../svgs/Technology";
+import { EVENTS, trackEvent, trackSelectedComponent, } from "../../track-stuff";
 
 const MarkdownPreviewContext = createContext({});
 
@@ -47,7 +48,13 @@ const EditCoolComponent = ({ component }) => {
 
                 <div className="w-100 py-4">
                     <h2 className="CoolComponent--Subtitle">Preview</h2>
-                    <button className="btn btn-primary mb-3" onClick={() => setTempSource(src)}>
+                    <button 
+                    className="btn btn-primary mb-3" 
+                    onClick={() => {
+                        setTempSource(src)
+                        trackEvent(EVENTS.CLICKED_REFRESH_PREVIEW)
+                    }}
+                    >
                         Refresh Preview
                     </button>
                     <img src={tempSource} className="FramePreview--Image" />
