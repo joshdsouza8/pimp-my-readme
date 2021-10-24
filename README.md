@@ -1,4 +1,4 @@
-[![WELCOME TO PIMP MY README, Want something cool like this? then pimp it out.](https://pimp-my-readme.webapp.io/pimp-my-readme/wavy-banner?subtitle=Want%20something%20cool%20like%20this%3F%20&title=WELCOME%20TO%20PIMP%20MY%20README)](https://pimp-my-readme.webapp.io)
+[![WELCOME TO PIMP MY README, Want something cool like this? then pimp it out.](https://pimp-my-readme.webapp.io/pimp-my-readme/wavy-banner?subtitle=Want%20something%20cool%20like%20this%3F%20&title=WELCOME%20TO:%20PIMP%20MY%20README)](https://pimp-my-readme.webapp.io)
 
 # Pimp my README
 This repository is the open-source project for Pimp my README.
@@ -41,9 +41,9 @@ Add your suggested feature to the feature-suggestions.txt file.
 See LICENSE
 
 Some Cool Component Examples:
-[![Pimp my README, an open-source project](https://pimp-my-readme.webapp.io/pimp-my-readme/wavy-banner?subtitle=an%20open-source%20project&title=Pimp%20my%20README)](https://pimp-my-readme.webapp.io)
+[![Pimp my README, An open source project :)](https://pimp-my-readme.webapp.io/pimp-my-readme/wavy-banner?subtitle=An%20open%20source%20project%20%3A%29&title=Pimp%20my%20README)](https://pimp-my-readme.webapp.io)
 
-[![Pimp my README](https://pimp-my-readme.webapp.io/pimp-my-readme/sliding-text?emojis=1f91f-1f3fe_1f60e_1f608_1f995&text=Pimp%2520my%2520README)](https://pimp-my-readme.webapp.io)
+[![Pimp my README](https://pimp-my-readme.webapp.io/pimp-my-readme/sliding-text?emojis=1f91f-1f3fe_1f60e_1f608_1f995&text=Pimp%2520your%2520README)](https://pimp-my-readme.webapp.io)
 
 [![Visitor Counter for pimp-my-readme](https://pimp-my-readme.webapp.io/pimp-my-readme/visitor-counter?page=pimp-my-readme)](https://pimp-my-readme.webapp.io)
 
