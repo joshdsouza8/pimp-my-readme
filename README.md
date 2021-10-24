@@ -1,3 +1,5 @@
+[![WELCOME TO PIMP MY README, Want something cool like this? then pimp it out.](https://pimp-my-readme.webapp.io/pimp-my-readme/wavy-banner?subtitle=Want%20something%20cool%20like%20this%3F%20&title=WELCOME%20TO%20PIMP%20MY%20README)](https://pimp-my-readme.webapp.io)
+
 # Pimp my README
 This repository is the open-source project for Pimp my README.
 
@@ -8,8 +10,10 @@ If you want to jazz up your profile a bit, you shouldn't spend hours doing so, s
 
 So I present to you, Pimp my README. 
 
+This was inspired by a Myspace editor called [pimp-my-profile.com]https://www.pimp-my-profile.com/)
+
 ## Overview
-Let's bring the blink tags back! Pimp my README is an open source profile builder that you can use to add some cool components to your README profile - Made with <3 by webapp.io :)
+Pimp my README is an open source profile builder that you can use to add some cool components to your README profile - Made with <3 by webapp.io :)
 
 ## Contributing
 The stack is React + Express (we do server-side rendering). When a cool component is loaded a GET request is sent to our Express server where an SVG is populated with the query parameters and returned.
