@@ -10,7 +10,7 @@ If you want to jazz up your profile a bit, you shouldn't spend hours doing so, s
 
 So I present to you, Pimp my README. 
 
-This was inspired by a Myspace editor called [![Pimp my Profile]](https://www.pimp-my-profile.com/)
+This was inspired by a Myspace editor called [pimp-my-profile.com]https://www.pimp-my-profile.com/)
 
 ## Overview
 Let's bring the blink tags back! Pimp my README is an open source profile builder that you can use to add some cool components to your README profile - Made with <3 by webapp.io :)
