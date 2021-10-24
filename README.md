@@ -1,4 +1,4 @@
-[![WELCOME TO PIMP MY README, Want something cool like this? then pimp it out.](https://pimp-my-readme.webapp.io/pimp-my-readme/wavy-banner?subtitle=Want%20something%20cool%20like%20this%3F%20then%20pimp%20it%20out.&title=WELCOME%20TO%20PIMP%20MY%20README)](https://pimp-my-readme.webapp.io)
+[![WELCOME TO PIMP MY README, Want something cool like this? then pimp it out.](https://pimp-my-readme.webapp.io/pimp-my-readme/wavy-banner?subtitle=Want%20something%20cool%20like%20this%3F%20&title=WELCOME%20TO%20PIMP%20MY%20README)](https://pimp-my-readme.webapp.io)
 
 # Pimp my README
 This repository is the open-source project for Pimp my README.
@@ -9,6 +9,8 @@ So basically, GitHub added a feature where you can add a "Profile Page" by uploa
 If you want to jazz up your profile a bit, you shouldn't spend hours doing so, so I made this quick project (during my company hackathon) that helps add some flavour to your README profiles.
 
 So I present to you, Pimp my README. 
+
+This was inspired by a Myspace editor called [![Pimp my Profile]](https://www.pimp-my-profile.com/)
 
 ## Overview
 Let's bring the blink tags back! Pimp my README is an open source profile builder that you can use to add some cool components to your README profile - Made with <3 by webapp.io :)
