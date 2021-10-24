@@ -49,7 +49,6 @@ const trackSelectedComponent = (key) => {
 }
 
 const trackEvent = (eventName = "") => {
-    console.log({ eventName });
     if (eventName === "") return;
     const payload = {
         Email: "",
@@ -57,7 +56,7 @@ const trackEvent = (eventName = "") => {
         Event: eventName,
     };
     payload.AnonUserId = getUserId();
-    axios.post("http://webapp.io/api/segment/event", payload, {
+    axios.post("https://webapp.io/api/segment/event", payload, {
         headers: {
             "Accept": "application/json",
             "Content-Type": "application/json"
