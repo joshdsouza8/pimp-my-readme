@@ -14,7 +14,7 @@ const GithubReadMeBuilder = () => {
     const webappTag = (
         <div>
             <p className="ReadMeBuilder--Paragraph__Small text-center">
-                Made with <Heart color="red" /> by <a href="/" onClick={() => trackEvent(EVENTS.CLICKED_WEBAPP)}>webapp.io</a>
+                Made with <Heart color="red" /> by <a href="https://webapp.io" onClick={() => trackEvent(EVENTS.CLICKED_WEBAPP)}>webapp.io</a>
             </p>
             <p className="ReadMeBuilder--Paragraph__Small text-center">
                 <a className="d-inline-flex align-items-center" href="https://github.com/joshdsouza8/pimp-my-readme" onClick={() => trackEvent(EVENTS.CLICKED_GITHUB_REPO)}>

@@ -11,6 +11,7 @@ using the site.
 import { v4 } from "uuid";
 import axios from "axios";
 import { CoolComponents } from "./pimp-my-readme"
+import { isLocal } from "../util/util";
 
 const EVENTS = {
     CLICKED_EXAMPLE: "Clicked Example", // Done
@@ -49,6 +50,10 @@ const trackSelectedComponent = (key) => {
 }
 
 const trackEvent = (eventName = "") => {
+    let url = "https://webapp.io/api/segment/event";
+    if (isLocal()) {
+        url = "http://webapplocal.io/api/segment/event";
+    }
     if (eventName === "") return;
     const payload = {
         Email: "",
@@ -56,10 +61,10 @@ const trackEvent = (eventName = "") => {
         Event: eventName,
     };
     payload.AnonUserId = getUserId();
-    axios.post("https://webapp.io/api/segment/event", payload, {
+    axios.post(url, payload, {
         headers: {
             "Accept": "application/json",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         }
     });
 }

@@ -4,6 +4,14 @@ const encodeStringForHTML = (rawStr = "") => {
     });
 }
 
+const isLocal = () => {
+    if (window.location.origin === "http://localhost:3001") {
+        return true;
+    }
+    return false;
+}
+
 module.exports = {
     encodeStringForHTML,
+    isLocal,
 }
