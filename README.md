@@ -13,7 +13,7 @@ So I present to you, Pimp my README.
 This was inspired by a Myspace editor called [pimp-my-profile.com]https://www.pimp-my-profile.com/)
 
 ## Overview
-Let's bring the blink tags back! Pimp my README is an open source profile builder that you can use to add some cool components to your README profile - Made with <3 by webapp.io :)
+Pimp my README is an open source profile builder that you can use to add some cool components to your README profile - Made with <3 by webapp.io :)
 
 ## Contributing
 The stack is React + Express (we do server-side rendering). When a cool component is loaded a GET request is sent to our Express server where an SVG is populated with the query parameters and returned.
