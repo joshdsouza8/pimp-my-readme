@@ -45,5 +45,7 @@ Some Cool Component Examples:
 
 [![Pimp my README](https://pimp-my-readme.webapp.io/pimp-my-readme/sliding-text?emojis=1f91f-1f3fe_1f60e_1f608_1f995&text=Pimp%2520my%2520README)](https://pimp-my-readme.webapp.io)
 
+[![Visitor Counter for pimp-my-readme](https://pimp-my-readme.webapp.io/pimp-my-readme/visitor-counter?page=pimp-my-readme)](https://pimp-my-readme.webapp.io)
+
 [![JavaScript_HTML_CSS_NodeJS_Express_](https://pimp-my-readme.webapp.io/pimp-my-readme/technology?technology=JavaScript_HTML_CSS_NodeJS_Express_)](https://pimp-my-readme.webapp.io)
 
