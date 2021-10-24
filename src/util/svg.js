@@ -36,6 +36,7 @@ const getSlidingTextWithEmojis = (text = "", emojiString = "") => {
                     align-items: center;
                     background-color: transparent;
                     justify-content: center;
+                    animation: slideRight 4s linear infinite alternate;
                 }
                 
                 @-webkit-keyframes slideRight {
@@ -163,6 +164,7 @@ const getWavyBanner = (title = "", subtitle = "") => {
                         0 3px 0 #efefef,
                         0 4px 0 #efefef,
                         0 12px 5px rgba(0, 0, 0, 0.1);
+                    animation: rotate 2s linear infinite alternate;
                 }
 
                 p {
@@ -172,7 +174,7 @@ const getWavyBanner = (title = "", subtitle = "") => {
                 
                 @media only screen and (max-width: 500px) {
                     h1 {
-                        font-size: 25px;
+                        font-size: 30px;
                     }
                     p {
                         font-size: 18px;
