@@ -29,7 +29,7 @@ const MarkdownCopy = ({ markdown }) => {
             <div className="pb-2">
                 <h2 className="CoolComponent--Subtitle">Markdown</h2>
                 <p className="CoolComponent--HelperText">
-                    Simply copy & paste this markdown link wherever you want in your GitHub README profile :)
+                    Simply copy & paste this markdown link wherever you want in your GitHub README profile!
                 </p>
             </div>
             <div className="row">
