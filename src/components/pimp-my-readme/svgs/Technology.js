@@ -105,7 +105,7 @@ const Technology = () => {
                 ))
             }
             <small className="d-block pb-2">
-                Don't see a technology you use? Type it above, and add it!
+                Don't see a technology you use? Type it above, and add it! :)
             </small>
             <button
                 className="btn btn-outline-primary"
